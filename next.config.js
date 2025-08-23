@@ -19,9 +19,11 @@ const nextConfig = {
     assetPrefix: isProd ? '/nextly/' : '',
     basePath: isProd ? '/nextly' : '',
     images: {
-        unoptimized: true,
+        // The `unoptimized: true` option is not supported in your Next.js version.
+        // For `next export` to work with `next/image`, you must use a loader other than the default.
+        loader: 'akamai',
+        path: '',
     },
-    output: 'export',
 };
 
 module.exports = nextConfig;
